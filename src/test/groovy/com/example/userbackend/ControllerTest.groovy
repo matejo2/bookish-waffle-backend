@@ -30,5 +30,6 @@ class ControllerTest extends Specification {
         then: "status is ok"
         response.getStatus() == HttpStatus.OK.value()
         and: "service was called"
+        1 * service.allUsers
     }
 }
